@@ -39,18 +39,22 @@ html {
 header {
   position: fixed;
   width: 100%;
+  height: 5.312rem;                          /*Maximum height of header content*/
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 2;
 }
 
 header .content {
   display: flex;
   align-items: center;
   padding: 1.875rem;
+  /*border: 1px solid red;*/
 }
 
 header .logo {
   flex: 1;
+  /*border: 1px solid green;*/
 }
 
 header nav ul {
@@ -110,6 +114,12 @@ header .mobile {
   }
 }
 
+/*For banner image*/
+.main-content .banner{
+  background-image: url(../images/banner-landingpage.jpg);
+}
+
+
 /* Sign Up Section */
 
 #sign-up-section {
@@ -117,22 +127,37 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  border: 2px solid red;
 }
 
 #sign-up-cta {
-  padding: 0 5rem 2.5rem 5rem;
+  margin: 10.625rem 0rem 10.625rem 6.25rem;
+  padding: 2rem 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  /*border: 2px solid blue;*/
 }
 
 #sign-up-cta .content {
   width: 25.625rem;
-  margin-top: 2rem;
+  /*margin-top: 2rem;*/
   font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
   line-height: 1.4;
   color: white;
+  /*border: 2px solid red;*/
+}
+
+/*For the gap on top of email and bottom of email*/
+#sign-up-cta .content .header{
+  margin: 0rem 0rem 0.75rem 0rem;
+  /*border: 1px solid blue;*/
+}
+
+#sign-up-cta .content .button{
+  margin: 1.625rem 0rem 0rem 0rem;
+  /*border: 1px solid green;*/
 }
 
 #sign-up-cta h1 {
