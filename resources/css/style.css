@@ -26,6 +26,9 @@ html {
 
 .image-container img {
   display: block;
+  width: 100%;
+  height: auto;
+  /*height: 65%;*/
 }
 
 @media only screen and (max-width: 760px) {
@@ -118,7 +121,6 @@ header .mobile {
 .main-content .banner{
   background-image: url(../images/banner-landingpage.jpg);
 }
-
 
 /* Sign Up Section */
 
@@ -236,22 +238,27 @@ header .mobile {
 
 #features-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 4rem 5%;
   background-color: #f3f3f3;
+  border: 2px solid blue;
 }
 
 .feature {
   flex: 1;
   padding: 2rem;
   margin: 0px 1.25rem;
+  height: 36.687rem;
+  /*width: auto;*/
   background-color: white;
+  border: 2px solid yellow;
 }
 
 .feature .image-container {
-  width: 90%;
-  height: 65%;
+  height: 25.796rem;
+  width: 35.718rem;
   margin: 0 auto;
+  border: 2px solid orange;
 }
 
 .feature h2 {
