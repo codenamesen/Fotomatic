@@ -28,7 +28,6 @@ html {
   display: block;
   max-width: 100%;
   height: auto;
-  /*height: 65%;*/
 }
 
 @media only screen and (max-width: 760px) {
@@ -80,9 +79,41 @@ header .icon {
   padding-left: .75rem;
 }
 
-header .mobile {
-  display: none;
+@media only screen and (min-width: 1000px){
+  header .mobile {
+    display: none;
+  }
 }
+
+@media only screen and (min-width: 760px) and (max-width: 1000px){
+  header .mobile img{
+    display: none;
+  }
+
+  header .mobile {
+    /*display: block;*/
+    /*width: 100%;*/
+    /*border: 2px solid red;*/
+  }
+
+  header .content {
+    padding: .5rem 0;
+  }
+
+  header .mobile li {
+    padding: 0;
+    margin: .5rem;
+  }
+
+  header .mobile .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+
+}
+
 
 @media only screen and (max-width: 760px) {
   header .desktop {
@@ -90,8 +121,9 @@ header .mobile {
   }
 
   header .mobile {
-    display: block;
+    /*display: block;*/
     width: 100%;
+    /*border: 2px solid red;*/
   }
 
   header .content {
@@ -99,14 +131,16 @@ header .mobile {
   }
 
   header .mobile ul {
-    display: flex;
+    /*display: flex;*/
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    /*width: 100%;
+    /*border: 2px solid red;*/
   }
 
   header .mobile li {
     padding: 0;
+    margin: 0;
   }
 
   header .mobile .button {
@@ -117,19 +151,29 @@ header .mobile {
   }
 }
 
-/*For banner image*/
-.main-content .banner{
-  background-image: url(../images/banner-landingpage.jpg);
-}
-
 /* Sign Up Section */
 
 #sign-up-section {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 43.5rem;
-  border: 2px solid red;
+  max-height: 43.5rem;
+}
+
+/*For banner background-image*/
+.main-content .banner{
+  background-image: url(../images/banner-landingpage.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+@media only screen and (max-width: 760px){
+  .main-content .banner{
+    background-position: right;
+  }
 }
 
 #sign-up-cta {
@@ -188,7 +232,7 @@ header .mobile {
   padding: 1.25rem 7.25rem;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1000px) {
   #sign-up-section {
     align-items: center;
     justify-content: center;
@@ -241,24 +285,21 @@ header .mobile {
   justify-content: center;
   padding: 4rem 5%;
   background-color: #f3f3f3;
-  border: 2px solid blue;
 }
 
 .feature {
   flex: 1;
   padding: 2rem;
   margin: 0px 1.25rem;
-  height: 36.687rem;
+  max-height: 36.687rem;
   /*width: auto;*/
   background-color: white;
-  border: 2px solid yellow;
 }
 
 .feature .image-container {
-  height: 25.796rem;
-  width: 35.718rem;
+  max-height: 25.796rem;
+  max-width: 35.718rem;
   margin: 0 auto 2.5rem auto;
-  border: 2px solid orange;
 }
 
 .feature h2 {
@@ -294,6 +335,10 @@ header .mobile {
     padding: 0;
   }
 
+  #filters-section .extra {
+    display: none;
+  }
+
   .feature {
     margin: 0;
     padding: 1.25rem 1rem 0 1rem;
@@ -310,7 +355,6 @@ header .mobile {
 #filters-section .content {
   padding: 0.625rem;
   margin-bottom: 5rem;
-  border: 2px solid red;
 }
 
 #filters-section .content h2 {
@@ -330,6 +374,7 @@ header .mobile {
   max-width: 100%;
   padding: 0 1%;
   display: inline-flex;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 760px) {
@@ -356,10 +401,6 @@ header .mobile {
   #filters-section .images-container {
     padding: 0;
   }
-
-  #filters-section .extra {
-    display: none;
-  }
 }
 
 /* Quotes Section */
@@ -370,6 +411,9 @@ header .mobile {
 
 #quotes-section .content {
   padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #quotes-section .quote {
@@ -386,16 +430,17 @@ header .mobile {
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
+    flex-direction: column;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
@@ -413,7 +458,8 @@ footer {
 footer .content {
   color: white;
   display: flex;
-  border: 2px solid red;
+  height: 100%;
+  align-items: center;
 }
 
 footer span{
